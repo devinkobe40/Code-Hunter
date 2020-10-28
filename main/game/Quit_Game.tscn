@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Quit_Game.gd" type="Script" id=1]
+[ext_resource path="res://titlescreen/titlescreen_bg.png" type="Texture" id=2]
+[ext_resource path="res://quit_game_assets/bg_border_final.png" type="Texture" id=3]
+[ext_resource path="res://MedusaGothic D.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://quit_game_assets/noway.png" type="Texture" id=5]
+[ext_resource path="res://quit_game_assets/take1.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 4 )
+
+[node name="Quit_Game" type="Control"]
+script = ExtResource( 1 )
+menu = "res://Main_Menu/titlescreen.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="TextureRect"]
+position = Vector2( 360.782, 240.186 )
+scale = Vector2( 0.150828, 0.160276 )
+texture = ExtResource( 2 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 57.1721
+margin_top = 79.8475
+margin_right = 675.172
+margin_bottom = 356.848
+
+[node name="Panel" type="Panel" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 611.0
+margin_bottom = 270.0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/Panel"]
+margin_top = -2.0
+margin_right = 514.0
+margin_bottom = 266.0
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="PanelContainer/Panel"]
+margin_left = -53.7491
+margin_top = 24.7207
+margin_right = 652.251
+margin_bottom = 113.721
+custom_fonts/font = SubResource( 1 )
+text = "are you sure you 
+want to quit?"
+align = 1
+
+[node name="Button" type="Button" parent="PanelContainer/Panel"]
+margin_left = 306.756
+margin_top = 134.248
+margin_right = 588.756
+margin_bottom = 230.248
+icon = ExtResource( 5 )
+flat = true
+
+[node name="Button2" type="Button" parent="PanelContainer/Panel"]
+margin_left = 10.3666
+margin_top = 128.663
+margin_right = 322.367
+margin_bottom = 234.663
+toggle_mode = true
+icon = ExtResource( 6 )
+flat = true
+[connection signal="pressed" from="PanelContainer/Panel/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="PanelContainer/Panel/Button2" to="." method="_on_Button2_pressed"]

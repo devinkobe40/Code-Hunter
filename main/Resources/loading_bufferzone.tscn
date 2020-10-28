@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/loading1.gd" type="Script" id=1]
+[ext_resource path="res://Resources/LOADING SCREEN RESOURCES/1.png" type="Texture" id=2]
+
+[node name="loading1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 1660, 60 )
+script = ExtResource( 1 )
+world_name = "res://GamePlay/Stages/Maps/Town/Scene/bigtown.tscn"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.34
+autostart = true
+
+[node name="WindowDialog" type="Popup" parent="."]
+visible = true
+margin_left = -17.0
+margin_top = -8.0
+margin_right = 735.0
+margin_bottom = 496.0
+
+[node name="Sprite" type="Sprite" parent="WindowDialog"]
+position = Vector2( 355.377, 243.02 )
+scale = Vector2( 0.460462, 0.495876 )
+texture = ExtResource( 2 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

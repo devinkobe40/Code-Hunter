@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/docu/Chest_next.gd" type="Script" id=1]
+[ext_resource path="res://Resources/item_asset/Holy Chest.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.3891, 4.93951 )
+
+[node name="Chest_next" type="KinematicBody2D" groups=[
+"chest",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+margin_right = 290.0
+margin_bottom = 185.0
+window_title = "Documentation"
+
+[node name="PanelContainer" type="PanelContainer" parent="WindowDialog"]
+margin_right = 295.0
+margin_bottom = 185.0
+
+[node name="Panel" type="Panel" parent="WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 288.0
+margin_bottom = 178.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WindowDialog/PanelContainer/Panel"]
+margin_right = 284.0
+margin_bottom = 170.0
+text = "next
+
+Description
+Starts the execution of a generator function or resumes it at the last executed yield expression.
+
+Syntax
+generator.next()
+
+Return Value
+#TODO
+
+Time Complexity
+#TODO
+
+Remarks
+When a generator function is resumed with a next() method, 
+the current yield expression always evaluates to None.
+ The execution then continues to the next yield expression, 
+where the generator is suspended again, and the value of the expression_list is 
+returned to next()’s caller. If the generator exits without yielding another value, 
+a StopIteration exception is raised."

@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://5thmap_chest_resized/5thmap_chest5.gd" type="Script" id=1]
+[ext_resource path="res://Resources/CHEST/pixil-frame-0 (84).png" type="Texture" id=2]
+[ext_resource path="res://5thmap_chest_resized/5thmap_chest5.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.25893, 7.99808 )
+
+[node name="5thmap_chest5" type="KinematicBody2D" groups=[
+"chest",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+margin_left = 80.0
+margin_top = 39.0
+margin_right = 645.0
+margin_bottom = 449.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_top = 1.0
+margin_right = 566.0
+margin_bottom = 412.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 559.0
+margin_bottom = 404.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )

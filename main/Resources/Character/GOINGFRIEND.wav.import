@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GOINGFRIEND.wav-92f7c60d8b04d333e7e60c03a49cb459.sample"
+
+[deps]
+
+source_file="res://Resources/Character/GOINGFRIEND.wav"
+dest_files=[ "res://.import/GOINGFRIEND.wav-92f7c60d8b04d333e7e60c03a49cb459.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

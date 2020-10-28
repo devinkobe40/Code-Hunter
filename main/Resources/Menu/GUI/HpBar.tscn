@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Menu/GUI/Bar.tscn" type="PackedScene" id=1]
+
+
+[node name="HpBar" instance=ExtResource( 1 )]
+margin_top = 4.9
+margin_bottom = -416.1
+
+[node name="TextureProgress" parent="." index="1"]
+margin_right = 169.0
+margin_bottom = 25.0
+rounded = true

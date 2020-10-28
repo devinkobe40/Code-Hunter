@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/coding/ide5.gd" type="Script" id=1]
+
+[node name="ide5" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+margin_left = 18.0221
+margin_top = 46.5721
+margin_right = 700.022
+margin_bottom = 440.572
+window_title = "Linked List"
+
+[node name="workspace" type="TextEdit" parent="WindowDialog"]
+margin_left = 4.0
+margin_top = 2.0
+margin_right = 419.0
+margin_bottom = 382.0
+text = "class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+class LinkedList:
+	def __init__(self):
+		self.head = None
+	def printList(self):
+		temp  = self.head
+		while (temp):
+			print(temp.data)
+			temp = temp.next
+if __name__ == '__main__'
+	llist = LinkedList()
+	llist.head               = Node(1)
+	second = Node(4)
+	third = Node(3)
+	llist.head.next        = second;
+	
+	second.next           = third
+	llist.printList()"
+readonly = true
+show_line_numbers = true
+
+[node name="var1" type="LineEdit" parent="WindowDialog/workspace"]
+margin_left = 40.0
+margin_top = 251.0
+margin_right = 155.0
+margin_bottom = 275.0
+align = 1
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="var2" type="LineEdit" parent="WindowDialog/workspace"]
+margin_left = 30.0
+margin_top = 306.901
+margin_right = 158.0
+margin_bottom = 330.901
+align = 1
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="var3" type="LineEdit" parent="WindowDialog/workspace"]
+margin_left = 35.0
+margin_top = 338.325
+margin_right = 153.0
+margin_bottom = 362.325
+align = 1
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="output" type="TextEdit" parent="WindowDialog"]
+margin_left = 427.0
+margin_top = 36.0
+margin_right = 674.0
+margin_bottom = 209.0
+readonly = true
+
+[node name="Label" type="Label" parent="WindowDialog"]
+margin_left = 427.756
+margin_top = 14.0056
+margin_right = 476.756
+margin_bottom = 45.0056
+text = "Output:
+"
+
+[node name="Button" type="Button" parent="WindowDialog"]
+margin_left = 510.318
+margin_top = 338.285
+margin_right = 593.318
+margin_bottom = 374.285
+text = "Run"
+[connection signal="pressed" from="WindowDialog/Button" to="." method="_on_Button_pressed"]

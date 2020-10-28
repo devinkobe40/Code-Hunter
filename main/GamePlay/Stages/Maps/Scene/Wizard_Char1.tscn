@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/Wizard_Char12.gd" type="Script" id=1]
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/wizard_staff.png" type="Texture" id=2]
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/wizard1.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/theseenemies.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 9.22845
+height = 23.7012
+
+[node name="Wizard1" type="KinematicBody2D" groups=[
+"npc",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.674437, -2.03755 )
+scale = Vector2( 0.073357, 0.0646603 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.17174, -7.34598 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 79.9924
+margin_top = 36.4953
+margin_right = 644.992
+margin_bottom = 444.495
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_left = -1.0
+margin_top = 2.0
+margin_right = 563.0
+margin_bottom = 409.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 557.0
+margin_bottom = 400.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="asd" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

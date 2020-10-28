@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sis Puella Magica! (Vocals, Orchestra) original ver. Madoka Magica.ogg-1772a14ca9b6f34b266cf65b8148a1ec.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/Sis Puella Magica! (Vocals, Orchestra) original ver. Madoka Magica.ogg"
+dest_files=[ "res://.import/Sis Puella Magica! (Vocals, Orchestra) original ver. Madoka Magica.ogg-1772a14ca9b6f34b266cf65b8148a1ec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

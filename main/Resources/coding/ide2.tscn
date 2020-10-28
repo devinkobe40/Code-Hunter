@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/coding/ide2.gd" type="Script" id=1]
+
+[node name="ide2" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+margin_left = 4.0
+margin_top = -44.0
+margin_right = 601.0
+margin_bottom = 430.0
+
+[node name="workspace" type="TextEdit" parent="WindowDialog"]
+margin_right = 596.0
+margin_bottom = 310.0
+text = "#Give the sum of two numbers
+#Given num1 = 5, num2 = 10
+num1 = 5
+num2 = 10
+
+print(                             )"
+readonly = true
+syntax_highlighting = true
+show_line_numbers = true
+
+[node name="LineEdit" type="LineEdit" parent="WindowDialog/workspace"]
+margin_left = 55.0618
+margin_top = 87.4042
+margin_right = 160.062
+margin_bottom = 111.404
+align = 1
+max_length = 11
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="output" type="TextEdit" parent="WindowDialog"]
+margin_left = -1.0
+margin_top = 361.0
+margin_right = 592.0
+margin_bottom = 471.0
+readonly = true
+syntax_highlighting = true
+
+[node name="Label" type="Label" parent="WindowDialog"]
+margin_left = 2.80441
+margin_top = 343.579
+margin_right = 42.8044
+margin_bottom = 357.579
+text = "Output:"
+
+[node name="Button" type="Button" parent="WindowDialog"]
+margin_left = 508.529
+margin_top = 323.079
+margin_right = 560.529
+margin_bottom = 343.079
+text = "Run"
+[connection signal="pressed" from="WindowDialog/Button" to="." method="_on_Button_pressed"]

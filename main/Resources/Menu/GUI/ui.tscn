@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Menu/GUI/ARROW MOVEMENTS AND ATTACK BUTTON/down.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Menu/GUI/ARROW MOVEMENTS AND ATTACK BUTTON/left.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Menu/GUI/ARROW MOVEMENTS AND ATTACK BUTTON/right.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Menu/GUI/ARROW MOVEMENTS AND ATTACK BUTTON/up.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Menu/GUI/ARROW MOVEMENTS AND ATTACK BUTTON/attack.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Menu/menu_asset/MENU.png" type="Texture" id=6]
+
+[node name="ui" type="Node2D"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 67.2993, 353.565 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 1 )
+action = "ui_down"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 14.6303, 306.261 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 2 )
+action = "ui_left"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2( 115.579, 300.896 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 3 )
+action = "ui_right"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+position = Vector2( 67.787, 256.518 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 4 )
+action = "ui_up"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+position = Vector2( 587.162, 309.675 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 5 )
+action = "atk"
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
+position = Vector2( 577, 2.82843 )
+scale = Vector2( 0.472026, 0.632304 )
+normal = ExtResource( 6 )
+action = "ui_menu"

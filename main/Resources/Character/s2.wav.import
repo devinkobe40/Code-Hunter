@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/s2.wav-23d523e940cd2f27a70e8b800eb1bb6d.sample"
+
+[deps]
+
+source_file="res://Resources/Character/s2.wav"
+dest_files=[ "res://.import/s2.wav-23d523e940cd2f27a70e8b800eb1bb6d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

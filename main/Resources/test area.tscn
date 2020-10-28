@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Character/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/item_asset/Scroll.tscn" type="PackedScene" id=3]
+
+[node name="test area" type="Node2D"]
+
+[node name="Portal" parent="." instance=ExtResource( 1 )]
+position = Vector2( 625.501, 118.897 )
+world_name = "res://GamePlay/Stages/6thMap.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 444.77, 138.963 )
+
+[node name="Scroll" parent="." instance=ExtResource( 3 )]
+position = Vector2( 355.63, 196.288 )

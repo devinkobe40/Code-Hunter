@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/coding/ide 4.gd" type="Script" id=1]
+
+[node name="ide_4" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+margin_left = 27.0
+margin_top = 24.0
+margin_right = 626.0
+margin_bottom = 471.0
+
+[node name="workspace" type="TextEdit" parent="WindowDialog"]
+margin_right = 597.0
+margin_bottom = 215.0
+text = "# Make a program that will give a range of 5 numbers and if it finish a loop 
+#will prompt a message
+
+for i in range(                ,                 ):
+
+	print(i)
+	
+	if i ==                :
+	
+		print(\"The loop have been completed\")"
+readonly = true
+syntax_highlighting = true
+show_line_numbers = true
+
+[node name="min_num" type="LineEdit" parent="WindowDialog/workspace"]
+margin_left = 110.773
+margin_top = 52.9429
+margin_right = 168.773
+margin_bottom = 76.9429
+align = 1
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="max_num" type="LineEdit" parent="WindowDialog/workspace"]
+margin_left = 181.635
+margin_top = 52.9429
+margin_right = 239.635
+margin_bottom = 76.9429
+align = 1
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="cond_num" type="LineEdit" parent="WindowDialog/workspace"]
+margin_left = 77.3781
+margin_top = 123.805
+margin_right = 135.378
+margin_bottom = 147.805
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="output" type="TextEdit" parent="WindowDialog"]
+margin_left = 14.0
+margin_top = 288.0
+margin_right = 595.0
+margin_bottom = 443.0
+readonly = true
+
+[node name="Label" type="Label" parent="WindowDialog"]
+margin_left = 15.5083
+margin_top = 241.67
+margin_right = 64.5083
+margin_bottom = 255.67
+text = "Output:"
+
+[node name="Button" type="Button" parent="WindowDialog"]
+margin_left = 506.603
+margin_top = 235.208
+margin_right = 587.603
+margin_bottom = 255.208
+text = "Run"
+[connection signal="clear" from="." to="." method="_on_ide_4_clear"]
+[connection signal="pressed" from="WindowDialog/Button" to="." method="_on_Button_pressed"]

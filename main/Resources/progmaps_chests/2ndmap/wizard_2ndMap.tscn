@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/progmaps_chests/2ndmap/wizard_2ndMap.gd" type="Script" id=1]
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/wizard_staff.png" type="Texture" id=2]
+[ext_resource path="res://2nd_Map_resources/wizard1.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/s4.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.94142
+
+[node name="wizard_2ndMap2" type="KinematicBody2D" groups=[
+"chest",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.0157092, -5.93259 )
+scale = Vector2( 0.0667444, 0.0678327 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.54971, -6.77996 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 81.0
+margin_top = 37.0
+margin_right = 645.0
+margin_bottom = 441.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_right = 565.0
+margin_bottom = 406.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 558.0
+margin_bottom = 399.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="wiz" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Darkest Dungeon OST - The Final Combat.ogg-d48eaff37b98efa66ce86d67dd9a363e.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/Darkest Dungeon OST - The Final Combat.ogg"
+dest_files=[ "res://.import/Darkest Dungeon OST - The Final Combat.ogg-d48eaff37b98efa66ce86d67dd9a363e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

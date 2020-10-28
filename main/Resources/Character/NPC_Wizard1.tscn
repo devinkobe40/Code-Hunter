@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Character/NPC_Wizard.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Character/wizard/wizard_CH.png" type="Texture" id=2]
+[ext_resource path="res://bufferzone_town_dialogue/wizard2 (1).png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/s4.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 87.4778
+height = 3.04179
+
+[node name="wizard1" type="KinematicBody2D" groups=[
+"npc",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 30.0238, 33.0513 )
+scale = Vector2( 0.100466, 0.0945252 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 28.5412, 34.6759 )
+scale = Vector2( 0.100466, 0.0945252 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -54.2808
+margin_top = -30.0417
+margin_right = 112.719
+margin_bottom = 0.958286
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+text = "               Wizard
+          <Sage of DIT>"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 213.551
+margin_top = 115.502
+margin_right = 261.551
+margin_bottom = 155.503
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog"]
+margin_left = -144.744
+margin_top = -80.1264
+margin_right = 455.256
+margin_bottom = 319.874
+texture = ExtResource( 3 )
+
+[node name="w2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

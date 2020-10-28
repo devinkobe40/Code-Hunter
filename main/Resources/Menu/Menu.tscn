@@ -1,0 +1,163 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Resources/Menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Maps_menu/joswa.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Maps_menu/map1-picture.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Maps_menu/map2-picture.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Maps_menu/map3-picture.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Maps_menu/map4-picture.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Maps_menu/map5-picture.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Maps_menu/map6-picture.png" type="Texture" id=8]
+
+[sub_resource type="Theme" id=1]
+VScrollBar/styles/scroll = null
+
+[sub_resource type="StyleBoxLine" id=2]
+content_margin_left = 15.0
+content_margin_right = 15.0
+color = Color( 0, 0, 0, 0.631373 )
+thickness = 0
+vertical = true
+
+[sub_resource type="Theme" id=3]
+VScrollBar/styles/scroll = SubResource( 2 )
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+margin_left = 1.0
+margin_top = 96.0
+margin_right = 174.0
+margin_bottom = 303.0
+window_title = "Menu"
+
+[node name="Panel" type="Panel" parent="WindowDialog"]
+margin_right = 172.0
+margin_bottom = 209.0
+
+[node name="ItemList" type="ItemList" parent="WindowDialog/Panel"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 172.0
+margin_bottom = 209.0
+theme = SubResource( 1 )
+allow_reselect = true
+fixed_icon_size = Vector2( 32, 32 )
+
+[node name="Player_Info" type="WindowDialog" parent="WindowDialog/Panel"]
+visible = true
+margin_left = 75.7836
+margin_top = 14.964
+margin_right = 657.784
+margin_bottom = 363.964
+window_title = "Player"
+
+[node name="Sprite" type="Sprite" parent="WindowDialog/Panel/Player_Info"]
+position = Vector2( 291.348, 175.61 )
+scale = Vector2( 0.30247, 0.321057 )
+texture = ExtResource( 2 )
+
+[node name="Inventory" type="WindowDialog" parent="WindowDialog/Panel"]
+visible = true
+margin_left = 9.53838
+margin_top = -61.6492
+margin_right = 356.539
+margin_bottom = 202.351
+theme = SubResource( 3 )
+window_title = "Inventory"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="inventory_list" type="ItemList" parent="WindowDialog/Panel/Inventory"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 346.0
+margin_bottom = 268.0
+fixed_icon_size = Vector2( 32, 32 )
+
+[node name="Map1" type="WindowDialog" parent="WindowDialog/Panel"]
+margin_left = 55.0
+margin_top = -62.0
+margin_right = 656.0
+margin_bottom = 339.0
+window_title = "Cave Of Logic"
+
+[node name="Button" type="TextureRect" parent="WindowDialog/Panel/Map1"]
+margin_left = 1.0
+margin_right = 601.0
+margin_bottom = 400.0
+texture = ExtResource( 3 )
+
+[node name="Map2" type="WindowDialog" parent="WindowDialog/Panel"]
+margin_left = 161.0
+margin_top = -42.0
+margin_right = 523.0
+margin_bottom = 358.0
+window_title = "Program Hall"
+
+[node name="TextureRect" type="TextureRect" parent="WindowDialog/Panel/Map2"]
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 362.0
+margin_bottom = 402.0
+texture = ExtResource( 4 )
+
+[node name="Map3" type="WindowDialog" parent="WindowDialog/Panel"]
+margin_left = 63.0
+margin_top = -53.0
+margin_right = 665.0
+margin_bottom = 350.0
+window_title = "Territory of Syntaxes"
+
+[node name="TextureRect" type="TextureRect" parent="WindowDialog/Panel/Map3"]
+margin_left = 0.901001
+margin_top = 0.292511
+margin_right = 600.901
+margin_bottom = 400.293
+texture = ExtResource( 5 )
+
+[node name="Map4" type="WindowDialog" parent="WindowDialog/Panel"]
+margin_left = 59.0
+margin_top = 14.0
+margin_right = 660.0
+margin_bottom = 339.0
+window_title = "Land Of Rising Sun"
+
+[node name="TextureRect" type="TextureRect" parent="WindowDialog/Panel/Map4"]
+margin_left = 0.237183
+margin_top = 1.1201
+margin_right = 600.237
+margin_bottom = 321.12
+texture = ExtResource( 6 )
+
+[node name="Map5" type="WindowDialog" parent="WindowDialog/Panel"]
+margin_left = 185.0
+margin_top = -50.0
+margin_right = 547.0
+margin_bottom = 349.0
+window_title = "Territory of Syntaxes"
+
+[node name="TextureRect" type="TextureRect" parent="WindowDialog/Panel/Map5"]
+margin_left = -0.735107
+margin_right = 360.265
+margin_bottom = 400.0
+texture = ExtResource( 7 )
+
+[node name="Map6" type="WindowDialog" parent="WindowDialog/Panel"]
+margin_left = 51.0
+margin_top = -51.0
+margin_right = 657.0
+margin_bottom = 353.0
+window_title = "Pacific Islands"
+
+[node name="TextureRect" type="TextureRect" parent="WindowDialog/Panel/Map6"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 604.0
+margin_bottom = 405.0
+texture = ExtResource( 8 )
+[connection signal="item_selected" from="WindowDialog/Panel/ItemList" to="." method="_on_ItemList_item_selected"]
+[connection signal="item_selected" from="WindowDialog/Panel/Inventory/inventory_list" to="." method="_on_inventory_list_item_selected"]

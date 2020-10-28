@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fantasy Celtic Music - Spirit of the Wild.ogg-f6f50f298c79434a92a55f1177260f65.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/Fantasy Celtic Music - Spirit of the Wild.ogg"
+dest_files=[ "res://.import/Fantasy Celtic Music - Spirit of the Wild.ogg-f6f50f298c79434a92a55f1177260f65.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

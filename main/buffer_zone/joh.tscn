@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://buffer_zone/joh.gd" type="Script" id=1]
+[ext_resource path="res://buffer_zone/pixil-frame-0 - 2020-05-01T013307.180.png" type="Texture" id=2]
+[ext_resource path="res://buffer_zone/LRM_EXPORT_32767610849522_20190425_070415454_550x400.jpeg" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 97.8583
+
+[node name="joh" type="KinematicBody2D" groups=[
+"npc",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.36042, -1.90735e-005 )
+scale = Vector2( 0.521146, 0.532029 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.27435, -23.3271 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 50.0
+margin_top = 34.0
+margin_right = 686.0
+margin_bottom = 450.0
+window_title = "Jar of Hearts"
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 635.0
+margin_bottom = 416.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 627.0
+margin_bottom = 408.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_left = 0.902527
+margin_top = 0.902496
+margin_right = 40.9025
+margin_bottom = 40.9025
+texture = ExtResource( 3 )

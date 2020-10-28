@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://4thmap_defender1.gd" type="Script" id=1]
+[ext_resource path="res://GamePlay/Stages/Maps/Town/Resource/defender.png" type="Texture" id=2]
+[ext_resource path="res://4thmap_chests_resources_resized/4thmap_defender2.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/theseenemies.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 13.0578
+
+[sub_resource type="Animation" id=2]
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3 ]
+}
+
+[node name="4thmap_defender1" type="KinematicBody2D" groups=[
+"npc",
+]]
+position = Vector2( 0.27739, -0.554779 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.509555, -0.0286245 )
+scale = Vector2( 0.191881, 0.182502 )
+texture = ExtResource( 2 )
+hframes = 4
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.07547, 3.58487 )
+shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 3.69283, -4.11508 )
+rect = Rect2( -10, -10, 10, 10 )
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 77.0
+margin_top = 37.0
+margin_right = 641.0
+margin_bottom = 447.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_right = 563.0
+margin_bottom = 410.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 556.0
+margin_bottom = 403.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="fourthmapd" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

@@ -1,0 +1,334 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Resources/Mobs/MOB_BUG/bug.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Mobs/MOB_BUG/MOB_BUG_assets/mob_bug.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.00618
+height = 1.5237
+
+[sub_resource type="Animation" id=2]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 4, 8, 9, 10 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("down_atk/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 2 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("left_atk/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 37, 38, 39, 40 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0117608, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("right_atk/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 19, 20, 21, 22 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("up_atk/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5, 0.7, 0.9, 1, 1.1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 57, 58, 59, 60, 61, 62, 63, 64 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 55, 56, 57 ]
+}
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 128.716
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 18.9491, 19.1575 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 21.3875, 20.1328 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 17.486, 15.7437 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 17.486, 17.6944 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5846, 19.1575 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 13.097, 19.6451 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 13.097, 22.0835 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 13.097, 23.0589 )
+
+[node name="bug" type="KinematicBody2D"]
+position = Vector2( 115.579, 127.284 )
+script = ExtResource( 1 )
+hit_points = 50
+atk = 4
+speed = 50
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.975349, 8.2905 )
+texture = ExtResource( 2 )
+vframes = 4
+hframes = 18
+frame = 8
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.292463, 10.4324 )
+shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 1.60319, 4.55667 )
+scale = Vector2( 0.594173, 1 )
+process_parent = true
+physics_process_parent = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = -39.9895
+margin_top = -57.0581
+margin_right = 41.0105
+margin_bottom = -26.0581
+rect_scale = Vector2( 1.00939, 1 )
+text = "  expected ':'
+<Tier.3 Bug>"
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/down_atk = SubResource( 2 )
+anims/down_walk = SubResource( 3 )
+anims/left_atk = SubResource( 4 )
+anims/left_walk = SubResource( 5 )
+anims/right_atk = SubResource( 6 )
+anims/right_walk = SubResource( 7 )
+anims/up_atk = SubResource( 8 )
+anims/up_walk = SubResource( 9 )
+
+[node name="detection" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+position = Vector2( -4.6673, 11.3604 )
+shape = SubResource( 10 )
+
+[node name="up_atk" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="up_atk"]
+position = Vector2( -3.41373, -30.2359 )
+shape = SubResource( 11 )
+
+[node name="up_atk_range" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="up_atk_range"]
+position = Vector2( -2.43839, -27.3099 )
+shape = SubResource( 12 )
+
+[node name="down_atk" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="down_atk"]
+position = Vector2( -0.975357, 40.4771 )
+shape = SubResource( 13 )
+disabled = true
+
+[node name="down_atk_range" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="down_atk_range"]
+position = Vector2( -1.46303, 42.4278 )
+shape = SubResource( 14 )
+
+[node name="left_atk" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_atk"]
+position = Vector2( -33.6497, 5.36444 )
+shape = SubResource( 15 )
+disabled = true
+
+[node name="left_atk_range" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_atk_range"]
+position = Vector2( -33.162, 5.36444 )
+shape = SubResource( 16 )
+
+[node name="right_atk" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_atk"]
+position = Vector2( 31.699, 5.85213 )
+shape = SubResource( 17 )
+disabled = true
+
+[node name="right_atk_range" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_atk_range"]
+position = Vector2( 32.1866, 6.3398 )
+shape = SubResource( 18 )
+[connection signal="body_entered" from="detection" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="detection" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="up_atk" to="." method="_on_up_atk_body_entered"]
+[connection signal="body_entered" from="up_atk_range" to="." method="_on_up_atk_range_body_entered"]
+[connection signal="body_exited" from="up_atk_range" to="." method="_on_up_atk_range_body_exited"]
+[connection signal="body_entered" from="down_atk" to="." method="_on_down_atk_body_entered"]
+[connection signal="body_entered" from="down_atk_range" to="." method="_on_down_atk_range_body_entered"]
+[connection signal="body_exited" from="down_atk_range" to="." method="_on_down_atk_range_body_exited"]
+[connection signal="body_entered" from="left_atk" to="." method="_on_left_atk_body_entered"]
+[connection signal="body_entered" from="left_atk_range" to="." method="_on_left_atk_range_body_entered"]
+[connection signal="body_exited" from="left_atk_range" to="." method="_on_left_atk_range_body_exited"]
+[connection signal="body_entered" from="right_atk" to="." method="_on_right_atk_body_entered"]
+[connection signal="body_entered" from="right_atk_range" to="." method="_on_right_atk_range_body_entered"]
+[connection signal="body_exited" from="right_atk_range" to="." method="_on_right_atk_range_body_exited"]

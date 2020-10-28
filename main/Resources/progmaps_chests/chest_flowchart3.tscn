@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/progmaps_chests/chest_flowchart3.gd" type="Script" id=1]
+[ext_resource path="res://Resources/CHEST/pixil-frame-0 (84).png" type="Texture" id=2]
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/decision.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.9535, 11.5755 )
+
+[node name="chest_flowchart3" type="KinematicBody2D" groups=[
+"chest",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+margin_left = 93.0
+margin_top = 48.0
+margin_right = 627.0
+margin_bottom = 434.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_right = 535.0
+margin_bottom = 386.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 528.0
+margin_bottom = 379.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_left = 0.667328
+margin_top = 0.847076
+margin_right = 40.6673
+margin_bottom = 40.8471
+texture = ExtResource( 3 )

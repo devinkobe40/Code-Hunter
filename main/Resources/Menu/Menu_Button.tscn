@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Menu/menu_asset/MENU.png" type="Texture" id=1]
+
+[node name="Menu_Button" type="TouchScreenButton"]
+position = Vector2( 2.3327, 2.33272 )
+scale = Vector2( 0.494162, 0.629875 )
+normal = ExtResource( 1 )
+action = "ui_menu"

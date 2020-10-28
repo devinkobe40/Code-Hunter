@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://Resources/ProgMap_Door/kindpng_4465833 (1).png" type="Texture" id=2]
+[ext_resource path="res://Resources/logical_operators/logical2.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 34.8563, 29.6092 )
+
+[node name="2ndmap_prog1" type="KinematicBody2D" groups=[
+"door",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.64621, -1.52588e-005 )
+scale = Vector2( 0.412126, 0.367327 )
+texture = ExtResource( 2 )
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="logical2" parent="." instance=ExtResource( 3 )]
+[connection signal="clear" from="logical2" to="." method="_on_logical2_clear"]

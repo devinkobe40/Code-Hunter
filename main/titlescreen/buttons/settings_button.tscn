@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://mmfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://titlescreen/buttons/Menubutton.gd" type="Script" id=2]
+
+[node name="settings_button" type="Button"]
+margin_left = 51.0
+margin_top = 12.0
+margin_right = 593.0
+margin_bottom = 126.0
+custom_fonts/font = ExtResource( 1 )
+flat = true
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 43.88
+margin_top = 3.83365
+margin_right = 362.88
+margin_bottom = 98.8336
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_as_outline = 7
+text = "QUIT"

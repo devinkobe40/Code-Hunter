@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PeriTune - Harvest2(CelticRoyalty Free Music).ogg-4c6223ca83bb8ae632c6da3b0ea57d49.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/PeriTune - Harvest2(CelticRoyalty Free Music).ogg"
+dest_files=[ "res://.import/PeriTune - Harvest2(CelticRoyalty Free Music).ogg-4c6223ca83bb8ae632c6da3b0ea57d49.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GamePlay/Stages/Maps/Town/Resource/npc_guardcommand.gd" type="Script" id=1]
+[ext_resource path="res://GamePlay/Stages/Maps/Town/Resource/guard1.png" type="Texture" id=2]
+[ext_resource path="res://bufferzone_town_dialogue/grandcommander1.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/high level.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.0579
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+length = 2.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 29 ]
+}
+
+[node name="npc_guard2" type="KinematicBody2D" groups=[
+"npc",
+]]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -41.5128
+margin_top = -54.1495
+margin_right = 33.4872
+margin_bottom = -40.1495
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+text = "Master Etuc"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.365356, 0.750671 )
+scale = Vector2( 0.160436, 0.164522 )
+texture = ExtResource( 2 )
+hframes = 30
+frame = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -6.12854, -9.18616 )
+shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -7.23872, -22.022 )
+scale = Vector2( 0.418863, 0.490231 )
+process_parent = true
+physics_process_parent = true
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 64.0
+margin_top = 57.0
+margin_right = 655.0
+margin_bottom = 418.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog"]
+margin_left = -2.37592
+margin_top = -24.3768
+margin_right = 597.624
+margin_bottom = 375.623
+texture = ExtResource( 3 )
+
+[node name="c2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

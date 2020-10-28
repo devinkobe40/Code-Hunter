@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Character/NPCs/Commander.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Character/NPCs/commander.png" type="Texture" id=2]
+[ext_resource path="res://bufferzone_town_dialogue/redguard1.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/i will fight.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.3938
+height = 12.6408
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[node name="Commander" type="KinematicBody2D" groups=[
+"npc",
+]]
+position = Vector2( -51.333, -114.247 )
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 13.0465
+margin_top = 48.3247
+margin_right = 92.0465
+margin_bottom = 62.3247
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+text = "Blood Guard"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 53.675, 106.4 )
+scale = Vector2( 0.150298, 0.14462 )
+texture = ExtResource( 2 )
+hframes = 3
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 48.9368, 95.2576 )
+shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 48.4073, 85.5899 )
+scale = Vector2( 0.674637, 0.736037 )
+process_parent = true
+physics_process_parent = true
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 82.1293
+margin_top = 57.9622
+margin_right = 383.129
+margin_bottom = 286.962
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog"]
+margin_left = -14.6533
+margin_top = -18.487
+margin_right = 585.347
+margin_bottom = 381.513
+texture = ExtResource( 3 )
+
+[node name="id" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

@@ -1,0 +1,114 @@
+{
+	"Problem_Set": {
+		"1": {
+			"description": "Create a flowchart to calculate the average of two numbers. Given: num1 = 5 & num2 = 3",
+			"flowchart": [
+				"start",
+				"num1 = 5, num2 = 3, avg = 0",
+				"(Avg=num1+num2)\/2",
+				" print(avg",
+				"exit"
+			]
+		},
+		"2": {
+			"description": "Create a flowchart to calculate the sum of two numbers. Given: num1 = 10 num2 = 15",
+			"flowchart": [
+				"start",
+				"num1 = 10, num2 = 15, sum = 0",
+				"(sum=num1+num2)",
+				" print(sum)",
+				"exit"
+			]
+		},
+		"3": {
+			"description": "Determine which is greater between three and one. Given: num1 = 3, num2 = 1",
+			"flowchart": [
+				"start",
+				"num1= 3, num2= 1",
+				"3>1",
+				"print(three is greater than one!)",
+				"print(it is invalid!)",
+				"exit"
+			]
+		},
+		"4": {
+			"description": "Create a flowchart to check an odd and even number. Given: input()",
+			"flowchart": [
+				"start",
+				"number = input()",
+				"if (number % 2) == 0:*",
+				" print((0) is Even .format(number))",
+				" print((0) is Odd .format(number))",
+				"exit"
+			]
+		},
+		"5": {
+			"description": "Create a flowchart that will input first name and last name and print them in reverse order ",
+			"flowchart": [
+				"start",
+				"Fullname= (lname + fname), fname = input(Input your First Name : ), lname = input(Input your Last Name : )",
+				"(lname+fname)",
+				"print(hello: (Fullname)",
+				"exit"
+			]
+		},
+		"6": {
+			"description": "Display a message that states: I have 1000 dollars so I can buy 3 football for 450.00 dollars. Given: quantity= 3, totalmoney= 1000, price= 450, statement1 = I have {1} dollars so I can buy {0} football for {2:.2f} dollars.",
+			"flowchart": [
+				"start",
+				"quantity= 3, totalmoney= 1000, price= 450, statement1 = I have {1} dollars so I can buy {0} football for {2:.2f} dollars.",
+				"print(statement1.format(quantity, totalMoney, price))",
+				"exit"
+			]
+		},
+		"7": {
+			"description": "Create a flowchart that checks whether the input number is greater than or less than the fixed stated number. Given: sum, input()",
+			"flowchart": [
+				"start",
+				"sum= input()",
+				"if ( sum > 20 )",
+				"print(The number is greater than 20)",
+				" print(The number is less than 20.)",
+				"exit"
+			]
+		},
+		"8": {
+			"description": "Create a flowchart that checks if the input value is equal to the fixed number. Given: days",
+			"flowchart": [
+				"start",
+				"days = int(input(How many days are in March?: ))",
+				"if (days == 31)",
+				"print(You passed the test)",
+				" print(You failed the test, return to the process once again)",
+				"return if(days == 31)",
+				"exit"
+			]
+		},
+		"9": {
+			"description": "Create a flowchart to find the sum of all numbers between 0 and 10. Given: total = 0, n = 10",
+			"flowchart": [
+				"start",
+				"total= 0, n= 10",
+				"n=n+1",
+				"total= total+n",
+				"if n=10",
+				"print(it is equal to (total))",
+				"print(they are not equal. Please try again)",
+				"return total",
+				"exit"
+			]
+		},
+		"10": {
+			"description": "Create a flowchart that calculates salary. Given: n1: input()",
+			"flowchart": [
+				"start",
+				"n1=int(input('Enter Hours'))",
+				"if (n1>8)",
+				"Sal=8*200+(n-1)*300",
+				"Sal=n1*200",
+				"print(Sal)",
+				"exit"
+			]
+		}
+	}
+}

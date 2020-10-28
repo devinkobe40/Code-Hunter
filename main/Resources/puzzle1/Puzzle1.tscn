@@ -1,0 +1,165 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/puzzle1/Puzzle1.gd" type="Script" id=1]
+[ext_resource path="res://Resources/item_asset/pixil-frame-0-82-ConvertImage.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Flowchart_GUI/1start.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Flowchart_GUI/1start_pressed.png" type="Texture" id=4]
+[ext_resource path="res://Resources/puzzle1/start.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Flowchart_GUI/Para1.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Flowchart_GUI/Para2.png" type="Texture" id=7]
+[ext_resource path="res://Resources/puzzle1/input.gd" type="Script" id=8]
+[ext_resource path="res://Resources/Flowchart_GUI/2process.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Flowchart_GUI/2prcoess_pressed.png" type="Texture" id=10]
+[ext_resource path="res://Resources/puzzle1/process.gd" type="Script" id=11]
+[ext_resource path="res://Resources/puzzle1/decision.gd" type="Script" id=12]
+[ext_resource path="res://Resources/Flowchart_GUI/4end.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Flowchart_GUI/4end_pressed.png" type="Texture" id=14]
+[ext_resource path="res://Resources/puzzle1/end.gd" type="Script" id=15]
+[ext_resource path="res://Resources/Menu/Menu_Button.tscn" type="PackedScene" id=16]
+
+[node name="Puzzle1" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+margin_right = 537.0
+margin_bottom = 404.0
+window_title = "Flowchart Problem #1"
+
+[node name="Panel" type="Panel" parent="WindowDialog"]
+margin_left = 2.40155
+margin_top = 4.80505
+margin_right = 537.401
+margin_bottom = 404.805
+
+[node name="connecting lines" type="TextureRect" parent="WindowDialog/Panel"]
+margin_left = 267.919
+margin_top = 50.0581
+margin_right = 307.919
+margin_bottom = 100.058
+texture = ExtResource( 2 )
+
+[node name="connecting lines2" type="TextureRect" parent="WindowDialog/Panel"]
+margin_left = 269.382
+margin_top = 125.16
+margin_right = 309.382
+margin_bottom = 175.16
+texture = ExtResource( 2 )
+
+[node name="connecting lines3" type="TextureRect" parent="WindowDialog/Panel"]
+margin_left = 268.894
+margin_top = 198.312
+margin_right = 308.894
+margin_bottom = 248.312
+texture = ExtResource( 2 )
+
+[node name="connecting lines4" type="TextureRect" parent="WindowDialog/Panel"]
+margin_left = 268.407
+margin_top = 288.532
+margin_right = 308.407
+margin_bottom = 338.532
+texture = ExtResource( 2 )
+
+[node name="start" type="TextureButton" parent="WindowDialog/Panel"]
+margin_left = 206.894
+margin_top = 12.8415
+margin_right = 336.894
+margin_bottom = 62.8415
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="WindowDialog/Panel/start"]
+margin_left = 8.59185
+margin_top = 8.59185
+margin_right = 120.592
+margin_bottom = 39.5919
+
+[node name="input" type="TextureButton" parent="WindowDialog/Panel"]
+margin_left = 210.628
+margin_top = 83.6467
+margin_right = 340.628
+margin_bottom = 133.647
+toggle_mode = true
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="WindowDialog/Panel/input"]
+margin_left = 16.1698
+margin_top = 6.67883
+margin_right = 113.17
+margin_bottom = 40.6788
+
+[node name="process" type="TextureButton" parent="WindowDialog/Panel"]
+margin_left = 212.293
+margin_top = 154.165
+margin_right = 342.293
+margin_bottom = 204.165
+toggle_mode = true
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+script = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="WindowDialog/Panel/process"]
+margin_left = 7.15988
+margin_top = 7.68934
+margin_right = 118.16
+margin_bottom = 43.6893
+
+[node name="decision" type="TextureButton" parent="WindowDialog/Panel"]
+margin_left = 207.438
+margin_top = 240.964
+margin_right = 337.438
+margin_bottom = 340.964
+toggle_mode = true
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="WindowDialog/Panel/decision"]
+margin_left = 18.6157
+margin_top = 10.0238
+margin_right = 114.616
+margin_bottom = 47.0238
+
+[node name="end" type="TextureButton" parent="WindowDialog/Panel"]
+margin_left = 211.615
+margin_top = 334.222
+margin_right = 341.615
+margin_bottom = 384.222
+toggle_mode = true
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
+script = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="WindowDialog/Panel/end"]
+margin_left = 29.0
+margin_top = 9.0
+margin_right = 111.0
+margin_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WindowDialog/Panel"]
+margin_left = 401.668
+margin_top = 110.747
+margin_right = 511.667
+margin_bottom = 272.749
+
+[node name="Button" type="Button" parent="WindowDialog/Panel"]
+margin_left = 414.322
+margin_top = 347.585
+margin_right = 500.322
+margin_bottom = 385.585
+toggle_mode = true
+text = "Submit"
+
+[node name="Menu_Button" parent="WindowDialog/Panel" instance=ExtResource( 16 )]
+position = Vector2( 400.336, 283.913 )
+scale = Vector2( 0.373828, 0.440349 )
+[connection signal="toggled" from="WindowDialog/Panel/start" to="." method="_on_start_toggled"]
+[connection signal="toggled" from="WindowDialog/Panel/input" to="." method="_on_input_toggled"]
+[connection signal="toggled" from="WindowDialog/Panel/process" to="." method="_on_process_toggled"]
+[connection signal="toggled" from="WindowDialog/Panel/decision" to="." method="_on_decision_toggled"]
+[connection signal="toggled" from="WindowDialog/Panel/end" to="." method="_on_end_toggled"]
+[connection signal="pressed" from="WindowDialog/Panel/Button" to="." method="_on_Button_pressed"]

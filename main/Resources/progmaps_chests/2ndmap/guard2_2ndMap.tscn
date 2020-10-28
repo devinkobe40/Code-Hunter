@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://guard2_2ndMap.gd" type="Script" id=1]
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/commander.png" type="Texture" id=2]
+[ext_resource path="res://2nd_Map_resources/guard_2nd(2).png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/theseenemies.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.99159
+height = 17.8797
+
+[sub_resource type="Animation" id=2]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0272042, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[node name="guard2_2ndMap" type="KinematicBody2D" groups=[
+"npc",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -5.74287, 2.71527 )
+scale = Vector2( 0.141164, 0.143339 )
+texture = ExtResource( 2 )
+hframes = 3
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -10.5312, -4.79434 )
+shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -11.5927, -15.985 )
+scale = Vector2( 0.660379, 0.773586 )
+process_parent = true
+physics_process_parent = true
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 82.0
+margin_top = 41.0
+margin_right = 646.0
+margin_bottom = 445.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_right = 565.0
+margin_bottom = 406.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 558.0
+margin_bottom = 399.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="g1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

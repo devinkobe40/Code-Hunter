@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Prog3/progdoor3.gd" type="Script" id=1]
+[ext_resource path="res://Resources/ProgMap_Door/kindpng_4465833 (1).png" type="Texture" id=2]
+[ext_resource path="res://Resources/coding/ide3.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41.335, 24.663 )
+
+[node name="progdoor3" type="KinematicBody2D" groups=[
+"door",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.49747, 0.130129 )
+scale = Vector2( 0.36051, 0.336327 )
+texture = ExtResource( 2 )
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.950012, 1.69101 )
+shape = SubResource( 1 )
+
+[node name="ide3" parent="." instance=ExtResource( 3 )]
+[connection signal="clear" from="ide3" to="." method="_on_ide3_clear"]

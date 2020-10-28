@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/guardmen2.gd" type="Script" id=1]
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/commander grade animation 2.png" type="Texture" id=2]
+[ext_resource path="res://GamePlay/Stages/Maps/Scene/guardmen1.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/theseenemies.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.92367
+height = 13.8895
+
+[node name="Node2D" type="KinematicBody2D" groups=[
+"npc",
+]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 2166.23 ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.10952, 11.7236 )
+scale = Vector2( 0.134782, 0.134415 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.01883, 2.26412 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 91.0
+margin_top = 47.0
+margin_right = 656.0
+margin_bottom = 445.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/WindowDialog"]
+margin_left = 1.0
+margin_right = 566.0
+margin_bottom = 399.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/WindowDialog/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 558.0
+margin_bottom = 392.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog/PanelContainer/Panel"]
+margin_left = 2.29083
+margin_top = -3.09512
+margin_right = 552.291
+margin_bottom = 386.905
+texture = ExtResource( 3 )
+
+[node name="thesenuts" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

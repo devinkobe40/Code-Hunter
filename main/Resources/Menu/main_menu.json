@@ -1,0 +1,31 @@
+{
+	"0": {
+		"name": "Character"
+	},
+	"1": {
+		"name": "Inventory"
+	},
+	"2": {
+		"name": "Map1"
+	},
+	"3": {
+		"name": "Map2"
+	},
+	"4": {
+		"name": "Map3"
+	},
+	"5": {
+		"name": "Map4"
+	},
+	"6": {
+		"name": "Map5"
+	},
+	"7": {
+		"name": "Map6"
+
+	},
+	"8": {
+		"name": "Exit"
+	}
+
+}

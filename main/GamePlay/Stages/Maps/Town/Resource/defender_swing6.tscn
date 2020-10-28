@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GamePlay/Stages/Maps/Town/Resource/defender_swing6.gd" type="Script" id=1]
+[ext_resource path="res://GamePlay/Stages/Maps/Town/Resource/defender_swing.png" type="Texture" id=2]
+[ext_resource path="res://bufferzone_town_dialogue/towndefender6.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Character/I WILFIGHTYELL.wav" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.0972
+
+[sub_resource type="Animation" id=2]
+length = 1.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.606271, 0.7, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 1, 2, 1, 3, 3, 4, 5, 6, 7, 11 ]
+}
+
+[node name="defender_swing6" type="KinematicBody2D" groups=[
+"npc",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.342215, -2.33019 )
+scale = Vector2( 0.190981, 0.198948 )
+texture = ExtResource( 2 )
+hframes = 13
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.975357, 0.487679 )
+shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WindowDialog" type="WindowDialog" parent="CanvasLayer"]
+visible = true
+margin_left = 121.0
+margin_top = 89.0
+margin_right = 328.0
+margin_bottom = 247.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/WindowDialog"]
+margin_left = -61.0003
+margin_top = -44.0002
+margin_right = 539.0
+margin_bottom = 356.0
+texture = ExtResource( 3 )
+
+[node name="ds4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+attenuation = 0.517632

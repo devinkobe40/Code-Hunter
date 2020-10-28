@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Prog4/progdoor4.gd" type="Script" id=1]
+[ext_resource path="res://Resources/ProgMap_Door/kindpng_4465833 (1).png" type="Texture" id=2]
+[ext_resource path="res://Resources/coding/ide 4.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 55.9391, 16.7927 )
+
+[node name="ide_4" type="KinematicBody2D" groups=[
+"door",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.52588e-005, -2.10529 )
+scale = Vector2( 0.445981, 0.421836 )
+texture = ExtResource( 2 )
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ide_4" parent="." instance=ExtResource( 3 )]
+[connection signal="clear" from="ide_4" to="." method="_on_ide_4_clear"]

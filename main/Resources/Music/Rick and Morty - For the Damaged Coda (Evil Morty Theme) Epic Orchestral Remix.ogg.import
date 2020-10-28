@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rick and Morty - For the Damaged Coda (Evil Morty Theme) Epic Orchestral Remix.ogg-cdeb801d9f21f92a56a4f5a1b41e6c9f.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/Rick and Morty - For the Damaged Coda (Evil Morty Theme) Epic Orchestral Remix.ogg"
+dest_files=[ "res://.import/Rick and Morty - For the Damaged Coda (Evil Morty Theme) Epic Orchestral Remix.ogg-cdeb801d9f21f92a56a4f5a1b41e6c9f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
